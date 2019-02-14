@@ -1,14 +1,14 @@
 <?php
-    //mysql‚ÉÚ‘±
+    //mysqlã«æŽ¥ç¶š
     $link = mysql_connect('localhost','root','Mi19745029_');
-    //DB‚Ì‘I‘ð
+    //DBã®é¸æŠž
     $db_selected = mysql_select_db('testdb',$link);
-    //SQL•¶‚Ì”­s
+    //SQLæ–‡ã®ç™ºè¡Œ
     $result = mysql_query('select * from test_table');
-    //Œ‹‰Ê‚ð˜A‘z”z—ñ‚É•ÏŠ·
+    //çµæžœã‚’é€£æƒ³é…åˆ—ã«å¤‰æ›
     $row = mysql_fetch_assoc($result);
-    //•\Ž¦
+    //è¡¨ç¤º
     var_dump($row);
-    //closeˆ—
+    //closeå‡¦ç†
     $close_flag = mysql_close($link);
 ?>
